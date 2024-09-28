@@ -1,5 +1,5 @@
 package SocialMedia;
-
+import java.util.*;
 public class Comment {
 	private Int commentId;
 	private Int postId;
