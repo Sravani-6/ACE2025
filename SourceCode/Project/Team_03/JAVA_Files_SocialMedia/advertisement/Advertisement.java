@@ -1,16 +1,16 @@
-package SocialMedia;
+package advertisement;
 
 public class Advertisement {
-	private Int adId;
+	private int adId;
 	private String adTitle;
 	private String adContent;
 	
-public Advertisement(Int adId,String adTitle,String adContent) {
+public Advertisement(int adId,String adTitle,String adContent) {
 	this.adId = adId;
 	this.adTitle = adTitle;
 	this.adContent = adContent;
 }
-public Int getAdId() {
+public int getAdId() {
 	return adId;
 }
 public String getAdTitle() {
@@ -19,10 +19,7 @@ public String getAdTitle() {
 public String getAdContent() {
 	return adContent;
 }
-public String grtAdUrl() {
-	return adUrl;
-}
-public void setAdId(Int adId) {
+public void setAdId(int adId) {
 	this.adId = adId;
 }
 public void setAdTitle(String adTitle) {
@@ -31,9 +28,4 @@ public void setAdTitle(String adTitle) {
 public void setAdContent(String adContent) {
 	this.adContent = adContent;
 }
-public void display() {
-	System.out.println("Advertisement Details:");
-	System.out.println("Add Id: "+adId);
-	System.out.println("Add title: "+adTitle);
-	System.out.println("Add content: "+adContent);
 }
