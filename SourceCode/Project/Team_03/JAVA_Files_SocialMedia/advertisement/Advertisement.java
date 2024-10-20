@@ -1,16 +1,16 @@
 package advertisement;
 
 public class Advertisement {
-	private int adId;
+	private String adId;
 	private String adTitle;
 	private String adContent;
 	
-public Advertisement(int adId,String adTitle,String adContent) {
+public Advertisement(String adId,String adTitle,String adContent) {
 	this.adId = adId;
 	this.adTitle = adTitle;
 	this.adContent = adContent;
 }
-public int getAdId() {
+public String getAdId() {
 	return adId;
 }
 public String getAdTitle() {
@@ -19,7 +19,7 @@ public String getAdTitle() {
 public String getAdContent() {
 	return adContent;
 }
-public void setAdId(int adId) {
+public void setAdId(String adId) {
 	this.adId = adId;
 }
 public void setAdTitle(String adTitle) {
