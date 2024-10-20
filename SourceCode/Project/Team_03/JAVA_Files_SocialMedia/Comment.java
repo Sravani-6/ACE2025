@@ -1,7 +1,11 @@
 package SocialMedia;
+<<<<<<< HEAD
 
 import java.sql.ResultSet;
 
+=======
+import java.util.*;
+>>>>>>> a1dcbe8b0f4491c35f6e2ae49bb9193f1d164158
 public class Comment {
 	private Int commentId;
 	private Int postId;

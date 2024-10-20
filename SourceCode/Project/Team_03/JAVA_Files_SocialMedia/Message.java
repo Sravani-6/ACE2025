@@ -1,5 +1,6 @@
-package SocialMedia;
-
+package sample;
+import java.util.*;
+import java.sql.*;
 public class Message {
 	private Int messageId;
 	private Int senderId;
@@ -43,5 +44,21 @@ public void display() {
 	System.out.println("Recevier Id: "+recevierId);
 	System.out.println("Content: "+content);
 	
+}
+public class MessageDAO{
+	public List<Message>getAllMessages(){
+		List<Message> mes=new ArrayList<>();
+		try {
+			connection con=Dbconnection.getConnection();
+			Statement stmt = con.createStatement();
+			ResultSet rs=stmt.executeQuery("select * from item_type");
+			while(rs.next()) {
+				int messageId=rs.getInt("messageId");
+				int senderId=rs.getInt("senderId");
+				int recevierId=rs.getInt("recevierId");
+				int content=rs.getInt("content");
+			}
+		}
+	}
 }
 }

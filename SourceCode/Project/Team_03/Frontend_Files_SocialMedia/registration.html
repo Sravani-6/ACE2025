@@ -6,29 +6,43 @@
     <title>Register</title>
     <style>
         body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #e2afaf, #e7b0b0);     
+    font-family: Arial, sans-serif;    
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+        }
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
+.left {
+  left: 0;
+  background-image: url(signup.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     max-width: 400px;
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 2rem;
-    border-radius: 10px;
+    padding: 1rem;
+    border-radius: 50px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    right : 0;
 }
 
 .form-container {
-    width: 100%;
+    width: 200%;
 }
 
 .form-container h1 {
@@ -80,7 +94,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <div class="split left">
+        
+    </div>
+    <div class="split container">
         <div class="form-container">
             <h1>Register</h1>
             <form id="registerForm">
