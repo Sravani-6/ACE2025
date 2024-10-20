@@ -1,37 +1,37 @@
 package Likes;
 public class Like {
-	private int likeId;
-	private int postId;
-	private int userId;
+	private String likeId;
+	private String postId;
+	private String userId;
 	
 	
-public Like(int likeId,int postId,int userId)
-{
+public Like(String likeId, String postId, String userId) {
+	// TODO Auto-generated constructor stub
 	this.likeId = likeId;
 	this.postId = postId;
 	this.userId = userId;
 }
-public int getLikeId() {
+public String getLikeId() {
 	return likeId;
 }
-public int getPostId() {
+public String getPostId() {
 	return postId;
 }
-public int getUserId() {
+public String getUserId() {
 	return userId;
 }
-public void setLikeId(int likeId) {
+public void setLikeId(String likeId) {
 	this.likeId = likeId;
 }
-public void setPostId(int postId) {
+public void setPostId(String postId) {
 	this.postId = postId;
 }
-public void setUserId(int userId) {
+public void setUserId(String userId) {
 	this.userId = userId;
 }
 public void display() {
-	System.out.println("Comment Details");
-	System.out.println("Comment Id: "+likeId);
+	System.out.println("Like Details");
+	System.out.println("Like Id: "+likeId);
 	System.out.println("Post Id: "+postId);
 	System.out.println("User Id: "+userId);
 }
