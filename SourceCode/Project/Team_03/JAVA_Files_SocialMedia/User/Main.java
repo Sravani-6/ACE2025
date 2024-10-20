@@ -1,13 +1,35 @@
-package User;
-import java.util.*;
+package socialMedia.User;
+import java.util.Scanner;
+
+import socialMedia.User.UserException.DuplicateUserException;
+import socialMedia.User.UserException.UserNotFoundException;
 public class Main {
-	public static void main(String[] args) {
-		List<User> al=new ArrayList<>();
-		System.out.format("%-5s %-15s %-10s %-20s\n","userID","username","emailID","passwd");
-		UserDAO dao=new UserDAO();
-		al=dao.getAllUsers();
-		for(User it:al) {
-			System.out.format("%-5s %-10s %-10s %-25s\n",it.getUserId(),it.getUsername(),it.getEmailID(),it.getPasswd());
-		}
+	private static UserUtility userUtility;
+
+	public static void main(String[] args) throws UserNotFoundException, DuplicateUserException {
+		Scanner sc = new Scanner(System.in);
+        UserUtility userUtil = new UserUtility();
+        userUtil.displayUserList();
+        System.out.println("Add a new user:"+userUtil.addUser());
+        userUtil.displayUserList();
+        System.out.println("Enter userid to delete");
+        String userid = sc.nextLine();
+        System.out.println(userUtil.deleteUser(userid));
+        userUtil.displayUserList();
+        //get details by userid
+        userUtil.getUserById();
+        //update the user details
+        //userUtil.updateUser();
+        try {
+            boolean success = userUtil.updateUser();
+            if (success) {
+                System.out.println("User updated successfully.");
+            } else {
+                System.out.println("User update failed.");
+            }
+        } catch (UserException.UserNotFoundException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+        userUtil.displayUserList();
 	}
 }

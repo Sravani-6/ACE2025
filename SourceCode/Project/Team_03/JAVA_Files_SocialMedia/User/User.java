@@ -1,16 +1,16 @@
-package User;
+package socialMedia.User;
 public class User {
-	private int userId;
+	private String userId;
 	private String username;
 	private String emailID;
 	private String passwd;
-	public User(int userId,String username,String emailID, String passwd) {
+	public User(String userId,String username,String emailID, String passwd) {
 		this.userId = userId;
 		this.username = username;
 		this.emailID = emailID;
 		this.passwd = passwd;
 	}
-	public int getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 	public String getUsername() {
@@ -22,7 +22,7 @@ public class User {
 	public String getPasswd() {
 		return passwd;
 	}
-	public void setUserId(int userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 	public void setUserName(String userName) {
@@ -34,11 +34,23 @@ public class User {
 	public void setPasswd(String passwd) {
 		this.passwd = passwd;
 	}
-	public void display() {
-		System.out.println("User Details");
-		System.out.println("User Id: "+userId);
-		System.out.println("User Name: "+username);
-		System.out.println("User Email: "+emailID);
-		System.out.println("User passwd: "+passwd);
-	}
+	 @Override
+	    public String toString() {
+	        return "User{" +
+	                "userId=" + userId +
+	                ", username='" + username + '\'' +
+	                ", email='" + emailID + '\'' +
+	                ", password='" + passwd + '\'' +
+	                '}';
+	    }
+	 public boolean equals(Object o) {
+	        if (this == o) return true;
+	        if (o == null || getClass() != o.getClass()) return false;
+	        User user = (User) o;
+	        return userId == user.userId && username.equals(user.username);
+	    }
+	// compareTo Method (compare by username)
+	    public int compareTo(User otherUser) {
+	        return this.username.compareTo(otherUser.username);
+	    }
 }
