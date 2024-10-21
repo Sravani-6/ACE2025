@@ -1,6 +1,27 @@
 package Message;
 
 public class Message  {
+<<<<<<< HEAD
+		private int messageId;
+		private int senderId;
+		private int receiverId;
+		private String content;
+		
+	public Message(int messageId,int senderId,int receiverId,String content) {
+		this.messageId = messageId;
+		this.senderId = senderId;
+		this.receiverId = receiverId;
+		this.content = content;
+	}
+	public int getMessageId() {
+		return messageId;
+	}
+	public int getSenderId() {
+		return senderId;
+	}
+	public int getRecevierId() {
+		return receiverId;
+=======
 		private String messageId;
 		private String senderId;
 		private String recieverId;
@@ -20,6 +41,7 @@ public class Message  {
 	}
 	public String getRecieverId() {
 		return recieverId;
+>>>>>>> 65a822c6ec19055c2c9c5c63383b00503d887e7a
 	}
 	public String getContent() {
 		// TODO Auto-generated method stub

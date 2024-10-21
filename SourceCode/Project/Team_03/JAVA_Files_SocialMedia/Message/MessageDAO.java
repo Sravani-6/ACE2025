@@ -2,9 +2,12 @@ package Message;
 
 import java.sql.*;
 import java.util.*;
+<<<<<<< HEAD
+=======
 
 import Message.MessageException.*;
 
+>>>>>>> 65a822c6ec19055c2c9c5c63383b00503d887e7a
 public class MessageDAO {
 	public List<Message>getAllMessages(){
 		List<Message> mes=new ArrayList<>();
@@ -13,11 +16,19 @@ public class MessageDAO {
 			Statement stmt = con.createStatement();
 			ResultSet rs=stmt.executeQuery("select * from message");
 			while(rs.next()) {
+<<<<<<< HEAD
+			int messageId=rs.getInt("messageId");
+				int senderId=rs.getInt("senderId");
+				int receiverId=rs.getInt("receiverId");
+				String content=rs.getString("content");
+				Message msg=new Message(messageId,senderId,receiverId,content);
+=======
 			String messageId=rs.getString("messageId");
 				String senderId=rs.getString("senderId");
 				String recieverId=rs.getString("recieverId");
 				String content=rs.getString("content");
 				Message msg=new Message(messageId,senderId,recieverId,content);
+>>>>>>> 65a822c6ec19055c2c9c5c63383b00503d887e7a
 				mes.add(msg);
 			}
 		}catch(Exception e)
@@ -26,6 +37,8 @@ public class MessageDAO {
 		}
 		return mes;
 }
+<<<<<<< HEAD
+=======
 	public boolean addUser(Message u) {
 		try {
 			Connection con = DbConnection.getConnection();
@@ -131,4 +144,5 @@ public class MessageDAO {
 	        }
 			return false;
 		}
+>>>>>>> 65a822c6ec19055c2c9c5c63383b00503d887e7a
 }

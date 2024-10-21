@@ -3,6 +3,18 @@ import java.util.*;
 
 public class Main {
 
+<<<<<<< HEAD
+	public static void main(String[] args) {
+				List<Message> al=new ArrayList<>();
+				System.out.format("%-5s %-10s %-10s %s\n","MessageId","SenderId","ReceiverId","Content");
+				MessageDAO dao=new MessageDAO();
+				al=dao.getAllMessages();
+				for(Message m:al){
+					System.out.format("%-10s %-10s %-10s %s\n",m.getMessageId(),m.getSenderId(),m.getRecevierId(),m.getContent());
+				}
+			}
+		}
+=======
 	public static void main(String[] args) throws MessageException {
 				List<Message> al=new ArrayList<>();
 				System.out.format("%-5s %-10s %-10s %s\n","MessageId","SenderId","RecieverId","Content");
@@ -34,3 +46,4 @@ public class Main {
 			}
 			}
 
+>>>>>>> 65a822c6ec19055c2c9c5c63383b00503d887e7a

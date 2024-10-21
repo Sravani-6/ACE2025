@@ -2,6 +2,22 @@ package friend;
 
 import java.util.ArrayList;
 import java.util.List;
+<<<<<<< HEAD
+
+public class Main {
+
+	public static void main(String[] args) {
+		List<Frnd> al=new ArrayList<>();
+		System.out.format("%-10s %-15s %-10s   %-15s\n","FriendId","UserId1","Status","UserId2");
+		FrndDAO dao=new FrndDAO();
+		al=dao.getAllFrnds();
+		for(Frnd m:al){
+			System.out.format("%-10s %-15s  %-10s   %-15s\n",m.getFriendId(),m.getUserId1(),m.getStatus(),m.getUserId2());
+		}
+
+	}
+
+=======
 import java.util.Scanner;
 
 import friend.FrndException.EntityNotFoundException;
@@ -41,4 +57,5 @@ public class Main {
         }
         userUtil.displayUserList();
 	}
+>>>>>>> 65a822c6ec19055c2c9c5c63383b00503d887e7a
 }

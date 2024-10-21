@@ -1,36 +1,36 @@
 package coment;
 public class Comment {
-	private int commentId;
-	private int postId;
-	private int userId;
+	private String commentId;
+	private String postId;
+	private String userId;
 	private String content;
 	
-public Comment(int commentId,int postId,int userId,String content)
+public Comment(String commentId,String postId,String userId,String content)
 {
 	this.commentId = commentId;
 	this.postId = postId;
 	this.userId = userId;
 	this.content = content;
 }
-public int getCommentId() {
+public String getCommentId() {
 	return commentId;
 }
-public int getPostId() {
+public String getPostId() {
 	return postId;
 }
-public int getUserId() {
+public String getUserId() {
 	return userId;
 }
 public String getContent() {
 	return content;
 }
-public void setCommentId(int commentId) {
+public void setCommentId(String commentId) {
 	this.commentId = commentId;
 }
-public void setPostId(int postId) {
+public void setPostId(String postId) {
 	this.postId = postId;
 }
-public void setUserId(int userId) {
+public void setUserId(String userId) {
 	this.userId = userId;
 }
 public void setContent(String content) {

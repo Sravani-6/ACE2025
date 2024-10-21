@@ -1,13 +1,28 @@
 package advertisement;
 
 import java.sql.Connection;
+<<<<<<< HEAD
+import java.sql.ResultSet;
+=======
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+>>>>>>> 65a822c6ec19055c2c9c5c63383b00503d887e7a
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+<<<<<<< HEAD
+public class AdverDao {
+	public List<Advertisement>getAllAdvertisements(){
+		List<Advertisement> mes=new ArrayList<>();
+		try {
+			Connection con=DbConnection.getConnection();
+			Statement stmt = con.createStatement();
+			ResultSet rs=stmt.executeQuery("select * from advertisement");
+			while(rs.next()) {
+			int adId=rs.getInt("AdId");
+=======
 import advertisement.AdException.DuplicateAdException;
 
 public class AdverDao {
@@ -19,6 +34,7 @@ public class AdverDao {
 			ResultSet rs=stmt.executeQuery("select * from advertisement");
 			while(rs.next()) {
 			String adId=rs.getString("AdId");
+>>>>>>> 65a822c6ec19055c2c9c5c63383b00503d887e7a
 			String adTitle=rs.getString("adTitle");
 			String adContent=rs.getString("adContent");
 			Advertisement msg=new Advertisement(adId,adTitle,adContent);
@@ -30,6 +46,9 @@ public class AdverDao {
 		}
 		return mes;
 }
+<<<<<<< HEAD
+}
+=======
 	public boolean addAd(Advertisement u) throws AdException.DuplicateAdException{
 		try {
 			Connection con = DbConnection.getConnection();
@@ -135,3 +154,4 @@ public class AdverDao {
         }
     }
 }
+>>>>>>> 65a822c6ec19055c2c9c5c63383b00503d887e7a

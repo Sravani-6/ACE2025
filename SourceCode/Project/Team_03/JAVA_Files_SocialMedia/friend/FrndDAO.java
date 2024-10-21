@@ -3,9 +3,12 @@ package friend;
 import java.sql.*;
 import java.util.*;
 
+<<<<<<< HEAD
+=======
 import friend.FrndException.*;
 
 
+>>>>>>> 65a822c6ec19055c2c9c5c63383b00503d887e7a
 public class FrndDAO {
 	public List<Frnd>getAllFrnds(){
 		List<Frnd> mes=new ArrayList<>();
@@ -14,11 +17,19 @@ public class FrndDAO {
 			Statement stmt = con.createStatement();
 			ResultSet rs=stmt.executeQuery("select * from friend");
 			while(rs.next()) {
+<<<<<<< HEAD
+			int friendId=rs.getInt("friendId");
+			int userId1=rs.getInt("userId1");
+			String status=rs.getString("status");
+			int userId2=rs.getInt("userId2");
+			Frnd msg=new Frnd(friendId,userId1,status,userId2);
+=======
 			String friendId=rs.getString("friendId");
 			String userId1=rs.getString("userId1");
 			String userId2=rs.getString("userId2");
 			String status=rs.getString("status");
 			Frnd msg=new Frnd(friendId,userId1,userId2,status);
+>>>>>>> 65a822c6ec19055c2c9c5c63383b00503d887e7a
 			mes.add(msg);
 			}
 		}catch(Exception e)
@@ -27,6 +38,9 @@ public class FrndDAO {
 		}
 		return mes;
 }
+<<<<<<< HEAD
+}
+=======
 	public boolean addUser(Frnd u) throws FrndAlreadyExistsException {
 		try {
 			Connection con = DbConnection.getConnection();
@@ -127,3 +141,4 @@ public class FrndDAO {
 	}
 }
 	
+>>>>>>> 65a822c6ec19055c2c9c5c63383b00503d887e7a
